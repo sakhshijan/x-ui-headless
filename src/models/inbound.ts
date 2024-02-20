@@ -53,6 +53,7 @@ export class Inbound {
       limitIp: 1,
     };
     inbound.props.settings.clients.push(client);
+    console.log(inbound.props.settings.clients);
     await Traffic.create({
       email: client.email,
       inbound_id: inbound.id,
