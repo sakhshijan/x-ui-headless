@@ -18,4 +18,5 @@ app.use("/", root);
 app.use(fourOhFour);
 app.use(errorHandler);
 
+console.log("App Key", process.env.API_KEY);
 export default app;

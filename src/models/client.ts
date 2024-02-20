@@ -13,6 +13,7 @@ export type TClient = {
   tgId?: string;
   totalGB?: number;
   inboundId: number;
+  limitIp: number;
 };
 
 export class Client {

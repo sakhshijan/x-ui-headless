@@ -50,6 +50,7 @@ export class Inbound {
       enable: true,
       tgId: "",
       reset: 0,
+      limitIp: 1,
     };
     inbound.props.settings.clients.push(client);
     await Traffic.create({
