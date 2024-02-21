@@ -38,6 +38,7 @@ export class ClientController {
       resetServer();
       return response.status(201).json({ message });
     } catch (error) {
+      console.log(error);
       return response.status(404).json({ error });
     }
   };
