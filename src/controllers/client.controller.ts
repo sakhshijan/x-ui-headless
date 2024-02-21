@@ -35,7 +35,8 @@ export class ClientController {
         inboundId,
         expiryTime: expiryTime || 0,
       });
-      resetServer();
+      setTimeout(() => resetServer, 10_000);
+
       return response.status(201).json({ message });
     } catch (error) {
       console.log(error);
@@ -47,7 +48,7 @@ export class ClientController {
     try {
       const { id } = request.params as any;
       const message = await Client.remove(id);
-      resetServer();
+      setTimeout(() => resetServer, 10_000);
       return response.status(201).json({ message });
     } catch (error) {
       return response.status(404).json({ error });
@@ -80,7 +81,7 @@ export class ClientController {
         inboundId,
         expiryTime: expiryTime || 0,
       });
-      resetServer();
+      setTimeout(() => resetServer, 10_000);
       if (message === "client created") message = "client recharged";
       return response.status(201).json({ message });
     } catch (error) {
