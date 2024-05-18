@@ -39,7 +39,7 @@ export class Inbound {
     props: Pick<TClient, "totalGB" | "expiryTime" | "id">,
   ): Promise<string | null | undefined> {
     const inbound = await this.get();
-    const subId = crypto.randomBytes(8).toString("hex");
+    const subId = crypto.randomBytes(16).toString("hex");
     const client: Omit<TClient, "traffics"> = {
       ...props,
       id: props.id,
